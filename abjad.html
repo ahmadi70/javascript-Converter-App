@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Abjad Calculator</title>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+		<link href="css/styleA.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div id="heading">
+			<h1>Persian text to Abjad</h1>
+		</div>
+		<div id="about">
+			<h2>Abjad Calculator</h2>
+			<p>
+	In Arabic language, each character has an equivalent numerical value known as Abjad numbers. 
+	This small program calculates the numerical value of letters, words, phrases and 
+	sentences derived from the Arabic alphabet. It also supports Dari/Persian alphabet too.
+This Abjad calculator is designed and written for fun by Sodabeh Sherzad using Vanilla JavaScript. 
+It can be used to calculate the numerical value of any word, phrase or sentence with ease 😊
+
+			</p>
+		</div>
+			
+		<div id="alpha">
+			<p>
+				<h3>Convert Persian text to Abjad</h3><br>
+				<textarea id="abjadInput" cols="60" rows="5" placeholder = "لطفا نام  خود را به عربی یا فارسی / دری بنویسید"></textarea>
+			</p><br>
+
+			<div>
+				<h5>Output</h5><br>
+				<p id="abjadOutput">0<p>
+			</div>
+			<button id="abjadCalculate" class="btn">Calculate</button><br><br>
+		</div>	
+			 <h5 class="comment_title">Abjad Table</h5>
+		<table class="table" border = "1" cellpadding = "4" cellspacing = "5">
+			<tbody>
+				<tr align="center" class="arabic"><th>Letter</th>
+				<td  id="0lt">ا</td>
+				<td  id="1lt">ب</td>
+				<td  id="2lt">ج</td>
+				<td  id="3lt">د</td>
+				<td  id="4lt">ه</td>
+				<td  id="5lt">و</td>
+				<td  id="6lt">ز</td>
+				<td  id="7lt">ح</td>
+				<td  id="8lt">ط</td></tr>
+
+				<tr align="center"><th>Name</th>
+				<td  id="0nm">alif</td>
+				<td  id="1nm">ba</td>
+				<td  id="2nm">jeem</td>
+				<td  id="3nm">dal</td>
+				<td  id="4nm">ha</td>
+				<td  id="5nm">waw</td>
+				<td  id="6nm">za</td>
+				<td  id="7nm">hay</td>
+				<td  id="8nm">toin</td>
+				</tr><tr align="center" class="arabic"><th>Value</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr>
+				<tr><td colspan="10">&nbsp;</td></tr>
+				<tr align="center" class="arabic"><th>Letter</th>
+				<td  id="9lt">ي</td>
+				<td  id="10lt">ك</td>
+				<td  id="11lt">ل</td>
+				<td  id="12lt">م</td>
+				<td  id="13lt">ن</td>
+				<td  id="14lt">س</td>
+				<td  id="15lt">ع</td>
+				<td  id="16lt">ف</td>
+				<td  id="17lt">ص</td></tr>
+
+				<tr align="center"><th>Name</th><td  id="9nm">ya</td>
+				<td  id="10nm">kaaf</td>
+				<td  id="11nm">laam</td>
+				<td  id="12nm">meem</td>
+				<td  id="13nm">noon</td>
+				<td  id="14nm">seen</td>
+				<td  id="15nm">ayn</td>
+				<td  id="16nm">fa</td>
+				<td  id="17nm">saad</td></tr>
+				<tr align="center" class="arabic"><th>Value</th><td>10</td><td>20</td><td>30</td><td>40</td><td>50</td><td>60</td><td>70</td><td>80</td><td>90</td></tr>
+				<tr><td colspan="10">&nbsp;</td></tr>
+
+				<tr align="center" class="arabic"><th>Letter</th><td  id="18lt">ق</td>
+				<td  id="19lt">ر</td>
+				<td  id="20lt">ش</td>
+				<td  id="21lt">ت</td>
+				<td  id="22lt">ث</td>
+				<td  id="23lt">خ</td>
+				<td  id="24lt">ذ</td>
+				<td  id="25lt">ض</td>
+				<td  id="26lt">ظ</td>
+				</tr>
+
+				<tr align="center"><th>Name</th><td  id="18nm">qaf</td>
+				<td  id="19nm">ra</td>
+				<td  id="20nm">sheen</td>
+				<td  id="21nm">ta</td>
+				<td  id="22nm">sa</td>
+				<td  id="23nm">kha</td>
+				<td  id="24nm">zal</td>
+				<td  id="25nm">dhwad</td>
+				<td  id="26nm">zoin</td>
+
+				</tr><tr align="center" class="arabic"><th>Value</th><td>100</td><td>200</td><td>300</td><td>400</td><td>500</td><td>600</td><td>700</td><td>800</td><td>900</td></tr>
+
+				<tr><td colspan="10">&nbsp;</td></tr>
+
+				<tr align="center" class="arabic"><th>Letter</th>
+				<td  id="27lt">غ</td><td colspan="9">&nbsp;</td></tr>
+
+				<tr align="center"><th>Name</th>
+				<td  id="27nm">ghayn</td><td colspan="9">&nbsp;</td>
+				</tr><tr align="center" class="arabic"><th>Value</th><td>1000</td><td colspan="9">&nbsp;</td></tr>
+
+			</tbody>
+		</table>
+		<script>
+		
+			var abjadInput = document.getElementById("abjadInput");
+			var abjadOutput = document.getElementById("abjadOutput");
+			var abjadCalculate = document.getElementById("abjadCalculate");
+			
+			abjadCalculate.addEventListener("click", function(){
+			
+				var input = abjadInput.value;
+				//console.log(input);
+				//console.log(input.length);
+				//console.log(input.charAt(0));
+				
+				var sum = 0;
+				for(var i = 0; i < input.length; i++){
+					//console.log(input.charAt(i));
+					if(input.charAt(i) == "ا") sum += 1;
+					else if(input.charAt(i) == "ب" || input.charAt(i) == "پ") sum += 2;
+					else if(input.charAt(i) == "ت") sum += 400;
+					else if(input.charAt(i) == "ث") sum += 500;
+					else if(input.charAt(i) == "ج") sum += 3;
+					else if(input.charAt(i) == "ح") sum += 8;
+					else if(input.charAt(i) == "خ") sum += 600;
+					else if(input.charAt(i) == "د") sum += 4;
+					else if(input.charAt(i) == "ذ") sum += 700;
+					else if(input.charAt(i) == "ر") sum += 200;
+					else if(input.charAt(i) == "ز") sum += 7;
+					else if(input.charAt(i) == "س") sum += 60;
+					else if(input.charAt(i) == "ش") sum += 300;
+					else if(input.charAt(i) == "ص") sum += 90;
+					else if(input.charAt(i) == "ط") sum += 9;
+					else if(input.charAt(i) == "ظ") sum += 900;
+					else if(input.charAt(i) == "ض") sum += 800;
+					else if(input.charAt(i) == "ع") sum += 70;
+					else if(input.charAt(i) == "غ") sum += 1000;
+					else if(input.charAt(i) == "ف") sum += 80;
+					else if(input.charAt(i) == "ق") sum += 100;
+					else if(input.charAt(i) == "ک" || input.charAt(i) == "گ") sum += 20;
+					else if(input.charAt(i) == "ل") sum += 30;
+					else if(input.charAt(i) == "م") sum += 40;
+					else if(input.charAt(i) == "ن") sum += 50;
+					else if(input.charAt(i) == "و") sum += 6;
+					else if(input.charAt(i) == "ه") sum += 5;
+					else if(input.charAt(i) == "ی" || input.charAt(i) == "ي") sum += 10;
+				}
+				
+				abjadOutput.innerHTML = input + " = " + sum;
+			
+			});
+			
+			
+		
+		</script>
+		
+		<footer>
+			<div id="tw">
+				<div id="lef">
+					<h3>Countact us</h3>
+					<p>
+						 Afghan Girls Code<br>
+						 ( CTI )Code To Inspire, CA 94120<br>
+						 555-555-1234
+					</p>
+				</div>
+				<div id="rig">
+					<div id="cot">
+						<h3>About us</h3>
+						<p>
+							We learn HTML, CSS, JavaScript laungage, We like it<br>
+							Because it is amazing for Us.<br>
+							( CTI ) Code To Inspire
+					</div>
+					<div id="fa">
+						<h3>Follow us</h3>
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-google"></i></a></li>
+							<li><a href="#"><i class="fa fa-camera"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="end">
+				<p>Copyright@2018.<a href="#">Convert Digits</a>and<a href="#">Disigned by Sodabeh Sherzad</a></p>
+			</div>
+		</footer>
+	</body>
+</html>

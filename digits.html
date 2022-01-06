@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Digits convertor</title>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/styled.css" type="text/css" >
+	</head>
+	<body>
+		<div id="heading">
+			<h1>English digits to Persian digits</h1>
+		</div>
+		<div id="about">
+			<h2>English Digits (123)  Arabic or Dari/Persian Digits (١٢٣)</h2>
+			<p>
+	This small program helps accountants and analysts in Afghanistan, Iran, Arab countries 
+	and others to easily convert the numbers from English format to Arabic or Dari/Persian format.
+This program is designed and written for fun by Sodabeh Sherzad using Vanilla JavaScript 😊
+
+			</p>
+		</div>
+			<div id="num">
+				<p>
+					<strong>Enter English digits</strong><br>
+					<textarea name="digitInput" id="digitInput" cols="60" rows="5"></textarea>
+				</p><br>
+
+				<p>
+					<strong>Output</strong><br>
+					<textarea name="digitOutput" id="digitOutput" disabled cols="60" rows="5"></textarea>
+				</p>
+			</div>
+		<script>
+		
+			// var digitInput = "0123456789";
+			// var digitInput = prompt("Enter a number");
+			var digitInput = document.getElementById("digitInput");
+			var digitOutput = document.getElementById("digitOutput");
+			
+			
+		 
+			digitInput.addEventListener("keypress", function(e) {
+				//console.log(e);
+				
+				if(e.charCode >= 48 && e.charCode <= 57){
+					digitOutput.innerHTML = digitInput.value.
+						replace(/1/g, "۱").
+						replace(/2/g, "۲").
+						replace(/3/g, "\u06F3").
+						replace(/4/g, "\u06F4").
+						replace(/5/g, "\u06F5").
+						replace(/6/g, "\u06F6").
+						replace(/7/g, "\u06F7").
+						replace(/8/g, "\u06F8").
+						replace(/9/g, "\u06F9").
+						replace(/0/g, "\u06F0");
+					}else{
+					
+						e.preventDefault();
+					}
+					
+			});
+			
+		</script>
+		<footer>
+			<div id="tw">
+				<div id="lef">
+					<p>
+					<h3>Countact us</h3>
+					Afghan Girls Code<br>
+						 ( CTI )Code To Inspire, CA 94120<br>
+						 555-555-1234
+					</p>
+				</div>
+				<div id="rig">
+					<div id="cot">
+						<h3>About us</h3>
+						<p>
+							We learn HTML, CSS, JavaScript laungage, We like it<br>
+							Because it is amazing for Us.<br>
+							( CTI ) Code To Inspire
+					</div>
+					<div id="fa">
+						<h3>Follow us</h3>
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-google"></i></a></li>
+							<li><a href="#"><i class="fa fa-camera"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="end">
+				<p>Copyright@2018.<a href="#">Convert Digits</a>and<a href="#">Disigned by Sodabeh Sherzad</a></p>
+			</div>
+		</footer>
+	</body>
+</html>

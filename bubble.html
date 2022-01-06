@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Bubble Alphabets</title>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/styleal.css" type="text/css" >
+	</head>
+	<body>
+		<div id="heading">
+			<h1>English Alephabets to Bubble</h1>
+		</div>
+		<div id="about">
+			<h2>Bubble Text  Ⓑⓤⓑⓑⓛⓔ Ⓣⓔⓧⓣ</h2>
+			<p>
+	This is yet another super cool and text magic program. This program immediately generates your text characters inside of circles or bubbles.
+	You can post your text in bubbles for fun and entertainment on your Facebook, Twitter, 
+	Google+ or your other social media accounts.
+This program is designed and written for fun by Sodabeh Sherzad using Vanilla JavaScript 😊
+
+			</p>
+		</div>
+			
+		<div id="alpha">
+			<p>
+				<strong>Enter English Alphabets</strong><br>
+				<textarea name="digitInput" id="bubbleInput" cols="60" rows="5"></textarea>
+			</p><br>
+
+			<p>
+				<strong>Output</strong><br>
+				<textarea name="digitOutput" id="bubbleOutput" disabled cols="60" rows="5"></textarea>
+			</p>
+		</div>	
+		<script>
+			
+			var bubbleInput = document.getElementById("bubbleInput");
+			var bubbleOutput = document.getElementById("bubbleOutput");
+			
+			bubbleInput.addEventListener("keypress", function(e) {
+			
+				//console.log(e);
+				
+				if((e.charCode >= 65 && e.charCode <= 90) || (e.charCode >= 97 && e.charCode <= 122)){
+					bubbleOutput.innerHTML = bubbleInput.value.
+						replace(/A/g, "\u24B6").
+						replace(/B/g, "\u24B7").
+						replace(/C/g, "\u24B8").
+						replace(/D/g, "\u24B9").
+						replace(/E/g, "\u24BA").
+						replace(/F/g, "\u24BB").
+						replace(/G/g, "\u24BC").
+						replace(/H/g, "\u24BD").
+						replace(/I/g, "\u24BE").
+						replace(/J/g, "\u24BF").
+						replace(/K/g, "\u24C0").
+						replace(/L/g, "\u24C1").
+						replace(/M/g, "\u24C2").
+						replace(/N/g, "\u24C3").
+						replace(/O/g, "\u24C4").
+						replace(/P/g, "\u24C5").
+						replace(/Q/g, "\u24C6").
+						replace(/R/g, "\u24C7").
+						replace(/S/g, "\u24C8").
+						replace(/T/g, "\u24C9").
+						replace(/U/g, "\u24CA").
+						replace(/V/g, "\u24CB").
+						replace(/W/g, "\u24CC").
+						replace(/X/g, "\u24CD").
+						replace(/Y/g, "\u24CE").
+						replace(/Z/g, "\u24CF").
+						replace(/a/g, "\u24D0").
+						replace(/b/g, "\u24D1").
+						replace(/c/g, "\u24D2").
+						replace(/d/g, "\u24D3").
+						replace(/e/g, "\u24D4").
+						replace(/f/g, "\u24D5").
+						replace(/g/g, "\u24D6").
+						replace(/h/g, "\u24D7").
+						replace(/i/g, "\u24D8").
+						replace(/j/g, "\u24D9").
+						replace(/k/g, "\u24DA").
+						replace(/l/g, "\u24DB").
+						replace(/m/g, "\u24DC").
+						replace(/n/g, "\u24DD").
+						replace(/o/g, "\u24DE").
+						replace(/p/g, "\u24DF").
+						replace(/q/g, "\u24E0").
+						replace(/r/g, "\u24E1").
+						replace(/s/g, "\u24E2").
+						replace(/t/g, "\u24E3").
+						replace(/u/g, "\u24E4").
+						replace(/v/g, "\u24E5").
+						replace(/w/g, "\u24E6").
+						replace(/x/g, "\u24E7").
+						replace(/y/g, "\u24E8").
+						replace(/z/g, "\u24E9");
+					}else{
+						e.preventDefault();
+					}
+					
+			});
+			
+			
+		</script>
+		<footer>
+			<div id="tw">
+				<div id="lef">
+					<h3>Countact us</h3>
+					<p>
+						 Afghan Girls Code<br>
+						 ( CTI )Code To Inspire, CA 94120<br>
+						 555-555-1234
+					</p>
+				</div>
+				<div id="rig">
+					<div id="cot">
+						<h3>About us</h3>
+						<p>
+							We learn HTML, CSS, JavaScript laungage, We like it<br>
+							Because it is amazing for Us.<br>
+							( CTI ) Code To Inspire
+					</div>
+					<div id="fa">
+						<h3>Follow us</h3>
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-google"></i></a></li>
+							<li><a href="#"><i class="fa fa-camera"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="end">
+				<p>Copyright@2018.<a href="#">Convert Digits</a>and<a href="#">Disigned by Sodabeh Sherzad</a></p>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Flip Alphabets</title>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/styleal.css" type="text/css" >
+	</head>
+	<body>
+		<div id="heading">
+			<h1>English Alephabets to Flip</h1>
+		</div>
+		<div id="about">
+			<h2>Flip Text  ʇxǝ⊥ dıʃℲ</h2>
+			<p>
+	This program is so cool. This program instantly flips and converts your text write upside down. 
+	You can post the upside-down text for fun and entertainment on your Facebook, Twitter, 
+	Google+, Myspace or other social media accounts.
+	This program is designed and written for fun by Sodabeh Sherzad using Vanilla JavaScript 😊
+
+			</p>
+		</div>
+			
+		<div id="alpha">
+			<p>
+				<strong>Enter English Alphabit</strong><br>
+				<textarea name="digitInput" id="bubbleInput" cols="60" rows="5"></textarea>
+			</p><br>
+
+			<p>
+				<strong>Output</strong><br>
+				<textarea name="digitOutput" id="bubbleOutput" disabled cols="60" rows="5"></textarea>
+			</p>
+		</div>	
+		<script>
+			
+			var bubbleInput = document.getElementById("bubbleInput");
+			var bubbleOutput = document.getElementById("bubbleOutput");
+			
+			bubbleInput.addEventListener("keypress", function(e) {
+			
+				//console.log(e);
+				
+				if((e.charCode >= 65 && e.charCode <= 90) || (e.charCode >= 97 && e.charCode <= 122)){
+					bubbleOutput.innerHTML = bubbleInput.value.
+						replace(/A/g, "\u2200").
+						replace(/B/g, "\u1041").
+						replace(/C/g, "\u0186").
+						replace(/D/g, "\u25D6").
+						replace(/E/g, "\u018E").
+						replace(/F/g, "\u2132").
+						replace(/G/g, "\u2141").
+						replace(/H/g, "\u0048").
+						replace(/I/g, "\u0049").
+						replace(/J/g, "\u017F").
+						replace(/K/g, "\u22CA").
+						replace(/L/g, "\u02E5").
+						replace(/M/g, "\u0057").
+						replace(/N/g, "\u004E").
+						replace(/O/g, "\u004F").
+						replace(/P/g, "\u24C5").
+						replace(/Q/g, "\u038C").
+						replace(/R/g, "\u1D1D").
+						replace(/S/g, "\u0053").
+						replace(/T/g, "\u22A5").
+						replace(/U/g, "\u2229").
+						replace(/V/g, "\u039B").
+						replace(/W/g, "\u004D").
+						replace(/X/g, "\u24CD").
+						replace(/Y/g, "\u2144").
+						replace(/Z/g, "\u24CF").
+						replace(/a/g, "\u0250").
+						replace(/b/g, "\u0071").
+						replace(/c/g, "\u0254").
+						replace(/d/g, "\u0070").
+						replace(/e/g, "\u01DD").
+						replace(/f/g, "\u025F").
+						replace(/g/g, "\u0183").
+						replace(/h/g, "\u0265").
+						replace(/i/g, "\u0131").
+						replace(/j/g, "\u027E").
+						replace(/k/g, "\u029E").
+						replace(/l/g, "\u0283").
+						replace(/m/g, "\u026F").
+						replace(/n/g, "\u0075").
+						replace(/o/g, "\u006F").
+						replace(/p/g, "\u0064").
+						replace(/q/g, "\u0062").
+						replace(/r/g, "\u0279").
+						replace(/s/g, "\u0073").
+						replace(/t/g, "\u0287").
+						replace(/u/g, "\u006E").
+						replace(/v/g, "\u028C").
+						replace(/w/g, "\u028D").
+						replace(/x/g, "\u0078").
+						replace(/y/g, "\u028E").
+						replace(/z/g, "\u007A");
+					}else{
+						e.preventDefault();
+					}
+					
+			});
+			
+			
+		</script>
+		<footer>
+			<div id="tw">
+				<div id="lef">
+					<h3>Countact us</h3>
+					<p>
+						 Afghan Girls Code<br>
+						 ( CTI )Code To Inspire, CA 94120<br>
+						 555-555-1234
+					</p>
+				</div>
+				<div id="rig">
+					<div id="cot">
+						<h3>About us</h3>
+						<p>
+							We learn HTML, CSS, JavaScript laungage, We like it<br>
+							Because it is amazing for Us.<br>
+							( CTI ) Code To Inspire
+					</div>
+					<div id="fa">
+						<h3>Follow us</h3>
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-google"></i></a></li>
+							<li><a href="#"><i class="fa fa-camera"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="end">
+				<p>Copyright@2018.<a href="#">Convert Digits</a>and<a href="#">Disigned by Sodabeh Sherzad</a></p>
+			</div>
+		</footer>
+	</body>
+</html>
